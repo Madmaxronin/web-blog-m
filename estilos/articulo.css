@@ -174,7 +174,12 @@ article img{
 
 @media screen and (max-width: 800px){
 
+
     .container-aside{
         flex-wrap: wrap;
+    }
+
+    #icon-menu{
+        right: 20px;
     }
 }

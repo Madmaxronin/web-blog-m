@@ -280,6 +280,12 @@ header{
         max-width: 1000px;
         padding: 0 20px;
     }
+
+    #ctn-bars-search,
+    #ctn-bars-search input,
+    #box-search{
+        width: 100%;
+    }
 }
 
 
@@ -293,6 +299,7 @@ header{
     .move-container-all{
         transform: translateX(300px);
     }
+
 
     .menu{
         width: 0px;
@@ -340,6 +347,7 @@ header{
 
     #icon-menu{
         display: flex;
+        right: 60px;
     }
 
     .container-aside{
