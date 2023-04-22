@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
-    <title>Sobre mi</title>
+    <title>Contacto</title>
 
     <script src="https://kit.fontawesome.com/650238eb01.js" crossorigin="anonymous"></script>
 
 
     <link rel="stylesheet" href="estilos/principal.css">
     <link rel="stylesheet" href="estilos/articulo.css">
-    <link rel="stylesheet" href="estilos/sobre-mi.css">
+    <link rel="stylesheet" href="estilos/contacto.css">
 
 </head>
 
@@ -48,10 +48,10 @@
 
         <div class="container-all" id="move-content">
 
-            <div class="sobre-mi-container-cover">
+            <div class="contacto-container-cover">
                 <div class="container-info-cover">
-                    <h1>info</h1>
-                    <p>Aqui puedes encontrar, una de las tecnologias que mas utilizo para desarrollo web.</p>
+                    <h1>Contacto</h1>
+                    <p>contactame</p>
         
             </div>
 
@@ -60,25 +60,33 @@
             <div class="container-content">
 
                 <article>
-                    <h1>Sobre mi</h1>
-                    <p>Soy un desarrollador web que conoce acerca de Javascript-Css-Html. Utilizo estas 3 herramientas Front End para crear mis propios proyecto.
+                    <form class="form">
+                        <h2 class="form__title">Contactame</h2>
+                        <p class="form__paragraph">Para contactarme <a href="#" class="form__link">Entra aqui</a></p>
 
-                        Me apasiona el mundo digital en general, no me quedo solo con saber Javascript, CSS y HTML me gusta aprender cada vez mas tecnologias, que impulsen mi carrera y poder entrar al campo laboral como junior.
-                        
-                        En la siguiente lista encontraras todas las herramientas que he usado o uso actualmente:</p>
+                        <div class="form__container">
+                            <div class="form__group">
+                                <input type="text" id="name" class="form__input" placeholder=" ">
+                                <label for="name" class="form__lable">Nombre</label>
+                                <span class="form__line"></span>
+                            </div>
 
-                    <h2>Front End</h2>
+                            <div class="form__group">
+                                <input type="text" id="user" class="form__input" placeholder=" ">
+                                <label for="name" class="form__lable">Usuario</label>
+                                <span class="form__line"></span>
+                            </div>
 
-                    <img src="img/htmlimg.webp" class="img-1" alt="">
-                    <img src="img/cssimg.png" class="img-2" alt="">
-                    <img src="img/jsimg.png" class="img-3" alt="">
+                            <div class="form__group">
+                                <input type="text" id="email" class="form__input" placeholder=" ">
+                                <label for="email" class="form__lable">Correo</label>
+                                <span class="form__line"></span>
+                            </div>
 
-                    <h2>Back End</h2>
+                            <input type="sumbit" class="form__submit" value="Enviar"> 
 
-                    <img src="img/Python.png" class="img-4" alt="">
-                    <img src="img/GitHubimg.png" class="img-5" alt="">
-
-
+                        </div>
+                    </form>
                 </article>
 
             </div>

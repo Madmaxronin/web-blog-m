@@ -51,6 +51,7 @@
 
 .container-content{
     width: 1200px;
+    max-width: 900px;
     margin: auto;
     margin-top: 40px;
     display: flex;
@@ -58,7 +59,8 @@
 }
 
 article{
-    width: 100%;
+    width: 90%;
+    max-width: 900px;
     padding: 20px;
     padding-bottom: 40px;
     box-shadow: -10px 0 20px -30px black;
@@ -127,4 +129,5 @@ article h2{
     height: 200px;
     margin-left: 20px;
 }
+
 
