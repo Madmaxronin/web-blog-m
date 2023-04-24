@@ -122,12 +122,14 @@ article{
 .form__submit{
     background: #3866f2;
     color: #fff;
+    text-align: center;
     font-weight: 300;
     font-size: 1rem;
     padding: .8em 0;
     border: none;
     border-radius: .5em;
 }
+
 
 .form__line{
     position: absolute;
@@ -137,7 +139,7 @@ article{
     height: 1px;
     background-color: #3866f2;
     transform: scale(0);
-    transform: left bottom;
+    transform: left top;
     transition: transform .4s;
 }
 

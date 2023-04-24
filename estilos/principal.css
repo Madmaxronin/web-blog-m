@@ -66,15 +66,7 @@ header{
     position: relative;
 }
 
-.menu-selected:before{
-    content: '';
-    width: 100%;
-    height: 4px;
-    background: #46a2fd;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+
 
 .menu nav ul li a{
     color: #777777;
@@ -86,9 +78,7 @@ header{
     color: #46a2fd;
 }
 
-.menu .text-menu-selected{
-    color: #46a2fd;
-}
+
 
 .menu nav ul li a i{
     display: none;
