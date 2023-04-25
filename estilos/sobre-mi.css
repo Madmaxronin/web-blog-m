@@ -55,7 +55,9 @@
     margin: auto;
     margin-top: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: auto;
+    flex-direction: row;
+
 }
 
 article{
@@ -93,6 +95,7 @@ article p{
 }
 
 /*Imagenes*/
+
 article h2{
     margin-top: 20px;
     font-weight: 300;
@@ -114,8 +117,6 @@ article h2{
 .img-3{
     width: 200px;
     height: 200px;
-    object-fit: cover;
-    margin-left: 20px;
 }
 
 .img-4{
@@ -127,7 +128,16 @@ article h2{
 .img-5{
     width: 200px;
     height: 200px;
-    margin-left: 20px;
 }
 
+@media screen and (max-width: 950px){
+    .container-content{
+          width: 100%;
+    }
+}
 
+@media screen and (max-width: 580px){
+    .container-content{
+          width: 100%;
+    }
+}
