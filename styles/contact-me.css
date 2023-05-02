@@ -98,6 +98,7 @@ article{
     transition: transform .4s;
 }
 
+
 .form__input:focus ~ .form__line,
 .form__input:not(:placeholder-shown) + .form__line{
     transform: scale(1);

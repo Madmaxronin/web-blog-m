@@ -8,13 +8,6 @@ function mostrar_menu(){
 
 
 
-
-
-
-
-
-
-
                             //Buscador de contenido
 
 
@@ -83,4 +76,15 @@ function buscador_interno(){
             }
     }
 
+}
+
+//funcion captura texto
+
+function capture(){
+    var contact=document.getElementById("name").value;
+    console.log(contact);
+    var user=document.getElementById("user").value;
+    console.log(user);
+    var email=document.getElementById("email").value;
+    console.log(email);
 }
