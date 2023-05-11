@@ -1,90 +1,107 @@
-document.getElementById("icon-menu").addEventListener("click", mostrar_menu);
+const barsSearch = document.getElementById("ctn-bars-search");
+const coverCtnSearch = document.getElementById("cover-ctn-search");
+const inputSearch = document.getElementById("inputSearch");
+const boxSearch = document.getElementById("box-search");
 
-function mostrar_menu(){
-
-    document.getElementById("move-content").classList.toggle('move-container-all');
-    document.getElementById("show-menu").classList.toggle('show-menu-lateral');
+function showMenu() {
+  document
+    .getElementById("move-content")
+    .classList.toggle("move-container-all");
+  document.getElementById("show-menu").classList.toggle("show-menu-lateral");
 }
-
-
-
-                            //Buscador de contenido
-
-
-//Ejecutar funcion
-
-document.getElementById("icon-search").addEventListener("click", mostrar_buscador);
-document.getElementById("cover-ctn-search").addEventListener("click", ocultar_buscador);
-
-//Declarando variables
-
-bars_search =          document.getElementById("ctn-bars-search");
-cover_ctn_search =     document.getElementById("cover-ctn-search");
-inputSearch =          document.getElementById("inputSearch");
-box_search =           document.getElementById("box-search");
-
+document.getElementById("icon-menu").addEventListener("click", showMenu);
 
 //Funcion para mostrar el buscador
 
-function mostrar_buscador(){
-
-    bars_search.style.top = "80px";
+function toggleSearch(shouldShow) {
+  if (shouldShow) {
+    barsSearch.style.top = "80px";
     cover_ctn_search.style.display = "block";
     inputSearch.focus();
-
-}
-
-
-//Funcion ocultar buscador
-
-function ocultar_buscador(){
-
-    bars_search.style.top = "-10px";
+  } else {
+    barsSearch.style.top = "-10px";
     cover_ctn_search.style.display = "none";
     inputSearch.value = "";
+  }
 }
 
+const iconSearch = document.getElementById("icon-search");
+
+if (iconSearch) {
+  iconSearch.addEventListener("click", () => {
+    toggleSearch(true);
+  });
+}
+
+if (coverCtnSearch) {
+  coverCtnSearch.addEventListener("click", () => {
+    toggleSearch(false);
+  });
+}
+
+//Declarando variables
+
+function internSearch() {
+  filter = inputSearch.value.toUpperCase();
+  li = boxSearch.getElementsByTagName("li");
+
+  //Recorriendo elementos
+
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    textValue = a.textContent || a.innerText;
+
+    if (textValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+      boxSearch.style.display = "block";
+
+      if (inputSearch.value === "") {
+        boxSearch.style.display = "none";
+      }
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
 
 //Creando filtrado de busqueda
 
-document.getElementById("inputSearch").addEventListener("keyup", buscador_interno);
-
-function buscador_interno(){
-
-
-    filter = inputSearch.value.toUpperCase();
-    li = box_search.getElementsByTagName("li");
-
-    //Recorriendo elementos
-
-    for (i = 0; i < li.length; i++){
-
-            a = li[i].getElementsByTagName("a")[0];
-            textValue = a.textContent || a.innerText;
-
-            if(textValue.toUpperCase().indexOf(filter) > -1){
-
-                li[i].style.display = "";
-                box_search.style.display = "block";
-
-                if(inputSearch.value === ""){
-                    box_search.style.display = "none";
-                }
-
-            }else{
-                li[i].style.display = "none";
-            }
-    }
-
+if (inputSearch) {
+  inputSearch.addEventListener("keyup", internSearch);
 }
 
 //funcion captura texto
 
-function capture(){
-    var contact=document.getElementById("name").value;
-    console.log(contact);
-    var user=document.getElementById("user").value;
-    console.log(user);
-    var email=document.getElementById("email").value;
-    console.log(email);
+const buttonFormContact = document.querySelector("#form__submit");
+
+function capture() {
+  var contact = document.getElementById("name").value;
+  console.log(contact);
+  var user = document.getElementById("user").value;
+  console.log(user);
+  var email = document.getElementById("email").value;
+  console.log(email);
+
+  const form = document.getElementById("form-contact");
+  console.log(form);
 }
+
+buttonFormContact.addEventListener("click", capture);
+
+
+//funcion print
+
+
+const buttonFormLogin = document.querySelector("#form__login");
+
+function print() {
+    var usuario = document.getElementById("name").value;
+    console.log(usuario)
+    var contrasena = document.getElementById("password").value;
+    console.log(contrasena)
+
+    const form = document.getElementById("form__login")
+    console.log(form)
+}
+
+buttonFormLogin.addEventListener("click", print);
