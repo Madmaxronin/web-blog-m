@@ -9,7 +9,24 @@ function showMenu() {
     .classList.toggle("move-container-all");
   document.getElementById("show-menu").classList.toggle("show-menu-lateral");
 }
-document.getElementById("icon-menu").addEventListener("click", showMenu);
+
+
+
+                            //Buscador de contenido
+
+
+//Ejecutar funcion
+
+document.getElementById("icon-search").addEventListener("click", mostrar_buscador);
+document.getElementById("cover-ctn-search").addEventListener("click", ocultar_buscador);
+
+//Declarando variables
+
+bars_search =          document.getElementById("ctn-bars-search");
+cover_ctn_search =     document.getElementById("cover-ctn-search");
+inputSearch =          document.getElementById("inputSearch");
+box_search =           document.getElementById("box-search");
+
 
 //Funcion para mostrar el buscador
 
@@ -72,36 +89,11 @@ if (inputSearch) {
 
 //funcion captura texto
 
-const buttonFormContact = document.querySelector("#form__submit");
-
-function capture() {
-  var contact = document.getElementById("name").value;
-  console.log(contact);
-  var user = document.getElementById("user").value;
-  console.log(user);
-  var email = document.getElementById("email").value;
-  console.log(email);
-
-  const form = document.getElementById("form-contact");
-  console.log(form);
+function capture(){
+    var contact=document.getElementById("name").value;
+    console.log(contact);
+    var user=document.getElementById("user").value;
+    console.log(user);
+    var email=document.getElementById("email").value;
+    console.log(email);
 }
-
-buttonFormContact.addEventListener("click", capture);
-
-
-//funcion print
-
-
-const buttonFormLogin = document.querySelector("#form__login");
-
-function print() {
-    var usuario = document.getElementById("name").value;
-    console.log(usuario)
-    var contrasena = document.getElementById("password").value;
-    console.log(contrasena)
-
-    const form = document.getElementById("form__login")
-    console.log(form)
-}
-
-buttonFormLogin.addEventListener("click", print);
